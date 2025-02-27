@@ -1,0 +1,222 @@
+.itinerary-section {
+    padding: 5rem 0;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+  }
+  
+  .itinerary-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .day-tab {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .day-tab.active {
+    background: #e67e22;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+  }
+  
+  .itinerary-day {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .itinerary-day.active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .day-title h3 {
+    color: #e67e22;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .day-title h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+  }
+  
+  .day-meals {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+  }
+  
+  .day-description {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  .timeline {
+    position: relative;
+    margin: 2rem 0;
+  }
+  
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 110px;
+    top: 0;
+    bottom: -20px;
+    width: 2px;
+    background: #eee;
+  }
+  
+  .timeline-item:last-child::before {
+    display: none;
+  }
+  
+  .time {
+    font-weight: 600;
+    color: #e67e22;
+  }
+  
+  .activity h6 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .activity p {
+    color: #666;
+  }
+  
+  .day-highlights {
+    margin-top: 2rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .day-highlights h5 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .day-highlights ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .day-highlights li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .day-highlights i {
+    color: #e67e22;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .day-header {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  
+    .timeline-item {
+      grid-template-columns: 1fr;
+    }
+  
+    .timeline-item::before {
+      left: -20px;
+    }
+  
+    .time {
+      margin-bottom: 0.5rem;
+    }
+  
+    .day-highlights ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .itinerary-day {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .day-tab {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .day-title h3 {
+      font-size: 1.2rem;
+    }
+  
+    .day-title h4 {
+      font-size: 1rem;
+    }
+  }
